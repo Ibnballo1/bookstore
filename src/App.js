@@ -7,7 +7,6 @@ import './App.css';
 
 const App = () => (
   <div className="container">
-    <h3> To correct</h3>
     <Header />
     <Routes>
       <Route path="/" element={<Books />} />
