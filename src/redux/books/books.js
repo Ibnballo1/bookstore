@@ -3,12 +3,18 @@ export const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 export const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // initial state
-const bookState = [];
+const bookState = [
+  { title: 'Book 1', author: 'Author 1' },
+  { title: 'Book 2', author: 'Author 2' },
+];
 
 // Action Creators
-export const addBook = (data) => ({
+export const addBook = (title, author) => ({
   type: ADD_BOOK,
-  payload: data,
+  payload: {
+    title,
+    author,
+  },
 });
 
 export const removeBook = (data) => ({

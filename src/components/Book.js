@@ -4,18 +4,17 @@ import { useSelector } from 'react-redux';
 
 const Book = () => {
   const books = useSelector((state) => state.bookReducer);
-  console.log(books);
   const book = books.map((book, index) => (
-    <h1 key={index}>{book}</h1>
+    <div key={index}>
+      <h1>{book.title}</h1>
+      <p>{book.author}</p>
+      <button type="button">Remove</button>
+    </div>
   ));
 
   return (
     <section>
-      <div>
-        {book}
-        <p>Book Author</p>
-      </div>
-      <button type="button">Remove</button>
+      {book}
     </section>
   );
 };

@@ -8,5 +8,7 @@ const rootReducer = combineReducers({
 });
 
 const store = configureStore({ reducer: rootReducer });
+// console.log(store);
+// console.log(store.getState());
 
 export default store;
