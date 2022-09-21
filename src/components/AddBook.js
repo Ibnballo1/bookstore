@@ -5,13 +5,10 @@ import { addBook } from '../redux/books/books';
 
 const AddBook = () => {
   const dispatch = useDispatch();
-  // const books = useSelector((state) => state.bookReducer.data);
-  // console.log(books.length);
   const bookObj = {
     title: '',
     author: '',
     id: uuidv4(),
-    // id: books.length === 2 ? books.id += 2 : books[books.length - 1].id += 1,
   };
   const [state, setState] = useState(bookObj);
 
@@ -24,7 +21,6 @@ const AddBook = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state.id);
     dispatch(addBook(state.title, state.author, state.id));
     setState(bookObj);
   };
