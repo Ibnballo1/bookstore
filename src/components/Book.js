@@ -8,18 +8,42 @@ const Book = () => {
   const dispatch = useDispatch();
 
   return (
-    <section>
+    <section className="bookSection">
       {
         books.map((book) => (
-          <div key={book.id}>
-            <h1>{book.title}</h1>
-            <p>{book.author}</p>
-            <button
-              type="button"
-              onClick={() => dispatch(removeBook(book.id))}
-            >
-              Remove
-            </button>
+          <div className="bookContainer" key={book.id}>
+            <div className="forBook">
+              <h1 className="title">{book.title}</h1>
+              <p className="author">{book.author}</p>
+              <div className="forInputs">
+                <input
+                  className="inputs"
+                  type="submit"
+                  onClick={() => dispatch(removeBook(book.id))}
+                  value="Comments"
+                />
+                <span className="seperator">|</span>
+                <input
+                  className="inputs"
+                  type="submit"
+                  onClick={() => dispatch(removeBook(book.id))}
+                  value="Remove"
+                />
+                <span className="seperator">|</span>
+                <input
+                  className="inputs"
+                  type="submit"
+                  onClick={() => dispatch(removeBook(book.id))}
+                  value="Edit"
+                />
+              </div>
+            </div>
+            <div className="forGrade">
+              For Grade
+            </div>
+            <div className="currentChapter">
+              For Current Chapter
+            </div>
           </div>
         ))
       }

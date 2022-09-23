@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat+Alternates:wght@400;700&family=Montserrat+Subrayada:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat+Alternates:wght@400;700&family=Montserrat+Subrayada:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto+Slab:wght@300;400;700&display=swap');
 
 * {
   padding: 0;
@@ -8,15 +8,17 @@
 .container {
   min-height: 100vh;
   background-color: #fafafa;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
 }
 
+/** Styles for header **/
 .headers {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
   background-color: #fff;
-  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  padding: 1.438rem 0 1.688rem 0;
 }
 
 .logo-nav {
@@ -58,4 +60,53 @@
   color: #0290ff;
   width: 1.063rem;
   height: 1.063rem;
+}
+
+/** Styles for each book **/
+.bookSection {
+  border: 2px solid red;
+}
+
+.bookContainer {
+  border: 1px solid greenyellow;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  height: 8.625rem;
+  padding: 2rem 9.188rem 0 1.688rem;
+  margin: 2.313rem 0;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  color: #4386bf;
+}
+
+.forInputs {
+  margin-top: 1.313rem;
+}
+
+.inputs {
+  color: #4386bf;
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  border: none;
+}
+
+.seperator {
+  margin: 0 1.063rem;
+  height: 2.5rem;
+  color: #e8e8e8;
 }
