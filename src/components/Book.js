@@ -4,14 +4,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Book = () => {
-  const books = useSelector((state) => state.bookReducer.data);
+  const books = useSelector((state) => state.bookReducer);
   const dispatch = useDispatch();
 
   return (
     <section>
       {
-        books.map((book, index) => (
-          <div key={index}>
+        books.map((book) => (
+          <div key={book.id}>
             <h1>{book.title}</h1>
             <p>{book.author}</p>
             <button
