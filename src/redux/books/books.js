@@ -4,7 +4,7 @@ export const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 export const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 export const FETCH_BOOK = 'bookstore/books/FETCH_BOOK';
 
-const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/lOEYpVLxqrf1c1e4xdr2/books';
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/lOEYpVLxqrf1c1e4xdr2/books/';
 const books = [];
 
 export const fetchBooks = (payload) => ({
@@ -40,7 +40,7 @@ export const addBooks = (book) => async (dispatch) => {
 };
 
 export const removeBook = (book) => async (dispatch) => {
-  await axios.delete(`${baseURL}${book.id}`);
+  await axios.delete(`${baseURL}${book.item_id}`);
   dispatch({
     type: REMOVE_BOOK,
     payload: book,
