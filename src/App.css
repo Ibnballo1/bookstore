@@ -131,7 +131,6 @@
 
 .grade {
   background-color: #fff;
-  /* content: ''; */
   position: absolute;
   top: 6px;
   bottom: 6px;
@@ -157,9 +156,6 @@
 
 .divider {
   border-left: 1px solid #e8e8e8;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   align-self: center;
   width: 0.125rem;
   height: 4.375rem;
