@@ -32,9 +32,10 @@ const AddBook = () => {
 
   return (
     <section>
-      <h2>ADD NEW BOOK</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="add-book">ADD NEW BOOK</h2>
+      <form className="form" onSubmit={handleSubmit}>
         <input
+          className="titles"
           type="text"
           name="title"
           onChange={handleTitle}
@@ -43,6 +44,7 @@ const AddBook = () => {
           value={title}
         />
         <input
+          className="authors"
           type="text"
           name="author"
           onChange={handleAuthor}
@@ -51,6 +53,7 @@ const AddBook = () => {
           value={author}
         />
         <button
+          className="submitBtn"
           type="submit"
         >
           ADD BOOK
